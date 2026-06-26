@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dear Saniya 🌸 - A Gift From a Friend</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <p>Loading your gift...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">🌸 Saniya</a>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#gallery" class="nav-link">Smile Gallery</a>
+                <a href="#shayari" class="nav-link">Shayari</a>
+                <a href="#music" class="nav-link">Music Therapy</a>
+                <a href="#motivation" class="nav-link">Motivation</a>
+                <a href="#challenge" class="nav-link">Challenge</a>
+                <a href="#garden" class="nav-link">Memory Garden</a>
+                <a href="#care" class="nav-link">Care Corner</a>
+                <a href="#dreams" class="nav-link">Dream Board</a>
+                <a href="#gift" class="nav-link">Final Gift</a>
+            </div>
+            <div class="nav-controls">
+                <button id="musicToggle" class="music-btn" title="Toggle Background Music">🎵</button>
+                <button id="themeToggle" class="theme-btn" title="Toggle Dark/Light Mode">🌙</button>
+                <button id="menuToggle" class="menu-toggle">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page 1: Home -->
+        <section id="home" class="page home-page">
+            <div class="particles" id="particles"></div>
+            <div class="stars-background"></div>
+            
+            <div class="home-content">
+                <h1 class="welcome-title">Dear Saniya 🌸</h1>
+                <div class="typing-container">
+                    <p class="typing-text"></p>
+                    <span class="cursor"></span>
+                </div>
+            </div>
+            
+            <div class="floating-butterflies">
+                <div class="butterfly">🦋</div>
+                <div class="butterfly">🦋</div>
+                <div class="butterfly">🦋</div>
+            </div>
+        </section>
+
+        <!-- Page 2: Smile Gallery -->
+        <section id="gallery" class="page gallery-page">
+            <div class="page-header">
+                <h2>Smile Gallery 😊</h2>
+                <p>100+ Wholesome Moments to Brighten Your Day</p>
+            </div>
+            <div class="gallery-grid" id="galleryGrid"></div>
+        </section>
+
+        <!-- Page 3: Shayari Collection -->
+        <section id="shayari" class="page shayari-page">
+            <div class="page-header">
+                <h2>Shayari Collection ✨</h2>
+                <p>Words Woven with Care</p>
+            </div>
+            <div class="shayari-tabs">
+                <button class="tab-btn active" data-tab="friendship">Friendship</button>
+                <button class="tab-btn" data-tab="motivational">Motivational</button>
+                <button class="tab-btn" data-tab="hope">Hope</button>
+                <button class="tab-btn" data-tab="healing">Healing</button>
+                <button class="tab-btn" data-tab="quotes">Quotes</button>
+                <button class="tab-btn" data-tab="affirmations">Affirmations</button>
+            </div>
+            <div class="shayari-content" id="shayariContent"></div>
+        </section>
+
+        <!-- Page 4: Music Therapy -->
+        <section id="music" class="page music-page">
+            <div class="page-header">
+                <h2>Music Therapy 🎵</h2>
+                <p>Healing Through Sound</p>
+            </div>
+            <div class="music-tabs">
+                <button class="tab-btn active" data-tab="piano">Peaceful Piano</button>
+                <button class="tab-btn" data-tab="rain">Rain Sounds</button>
+                <button class="tab-btn" data-tab="nature">Nature Sounds</button>
+                <button class="tab-btn" data-tab="hindi">Soft Hindi Songs</button>
+                <button class="tab-btn" data-tab="instrumental">Instrumentals</button>
+                <button class="tab-btn" data-tab="motivational">Motivational</button>
+                <button class="tab-btn" data-tab="friendship">Friendship Songs</button>
+            </div>
+            <div class="music-grid" id="musicGrid"></div>
+        </section>
+
+        <!-- Page 5: Motivation Room -->
+        <section id="motivation" class="page motivation-page">
+            <div class="page-header">
+                <h2>Motivation Room 💪</h2>
+                <p>Cards of Encouragement</p>
+            </div>
+            <div class="motivation-grid" id="motivationGrid"></div>
+        </section>
+
+        <!-- Page 6: Happiness Challenge -->
+        <section id="challenge" class="page challenge-page">
+            <div class="page-header">
+                <h2>30-Day Happiness Challenge 🎯</h2>
+                <p>Small Steps Toward Big Smiles</p>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p class="challenge-counter"><span id="completedCount">0</span>/30 Completed</p>
+            <div class="challenges-grid" id="challengesGrid"></div>
+        </section>
+
+        <!-- Page 7: Memory Garden -->
+        <section id="garden" class="page garden-page">
+            <div class="page-header">
+                <h2>Memory Garden 🌷</h2>
+                <p>Click Flowers to Reveal Messages</p>
+            </div>
+            <div class="garden" id="garden"></div>
+            <div class="flower-message" id="flowerMessage"></div>
+        </section>
+
+        <!-- Page 8: Care Corner -->
+        <section id="care" class="page care-page">
+            <div class="page-header">
+                <h2>Care Corner 💝</h2>
+                <p>Tools for Your Wellness</p>
+            </div>
+            <div class="care-grid">
+                <div class="care-card" id="breathingCard">
+                    <h3>🫁 Breathing Exercise</h3>
+                    <div class="breathing-circle" id="breathingCircle"></div>
+                    <p id="breathingText">Breathe In</p>
+                </div>
+                <div class="care-card" id="timerCard">
+                    <h3>⏱️ Relaxation Timer</h3>
+                    <input type="number" id="timerMinutes" min="1" max="60" value="5" placeholder="Minutes">
+                    <button id="timerBtn">Start Timer</button>
+                    <div id="timerDisplay">00:00</div>
+                </div>
+                <div class="care-card">
+                    <h3>😊 Mood Tracker</h3>
+                    <div class="mood-selector" id="moodSelector"></div>
+                </div>
+            </div>
+            <div class="care-grid">
+                <div class="care-card">
+                    <h3>📔 Journal Section</h3>
+                    <textarea id="journalText" placeholder="Write your thoughts here..."></textarea>
+                    <button id="saveMemo">Save Memory</button>
+                </div>
+                <div class="care-card">
+                    <h3>🙏 Gratitude Notes</h3>
+                    <div id="gratitudeList"></div>
+                    <input type="text" id="gratitudeInput" placeholder="Add something you're grateful for...">
+                    <button id="addGratitude">Add</button>
+                </div>
+                <div class="care-card">
+                    <h3>💧 Reminders</h3>
+                    <p>💧 Drink Water Reminder: <span id="waterReminder">Next at 2:00 PM</span></p>
+                    <p>😴 Sleep Reminder: <span id="sleepReminder">Next at 11:00 PM</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 9: Dream Board -->
+        <section id="dreams" class="page dreams-page">
+            <div class="page-header">
+                <h2>Dream Board ✨</h2>
+                <p>Dare to Dream Big</p>
+            </div>
+            <div class="dreams-grid" id="dreamsGrid"></div>
+        </section>
+
+        <!-- Page 10: Final Gift -->
+        <section id="gift" class="page gift-page">
+            <div class="gift-content">
+                <div class="gift-text">
+                    <p>Dear Saniya,</p>
+                    <p>Life is not always easy.</p>
+                    <p>Some days feel heavy.</p>
+                    <p>Some moments make us question everything.</p>
+                    <p>But difficult days do not define who you are.</p>
+                    <p>Please remember:</p>
+                    <div class="gift-highlights">
+                        <p>✨ You deserve peace.</p>
+                        <p>✨ You deserve happiness.</p>
+                        <p>✨ You deserve kindness.</p>
+                        <p>✨ You deserve hope.</p>
+                    </div>
+                    <p>Whenever life feels overwhelming,</p>
+                    <p>come back here.</p>
+                    <p>Maybe this little website cannot solve every problem,</p>
+                    <p>but if it can make you smile even once,</p>
+                    <p>then it has fulfilled its purpose.</p>
+                    <p>Take care of yourself.</p>
+                    <p>Keep believing.</p>
+                    <p>One day,</p>
+                    <p>you will look back and realize</p>
+                    <p>how incredibly strong you truly were.</p>
+                    <p class="signature">— From a Friend 🌸</p>
+                </div>
+            </div>
+            <div class="floating-hearts" id="floatingHearts"></div>
+            <div class="floating-butterflies-gift">
+                <div class="butterfly">🦋</div>
+                <div class="butterfly">🦋</div>
+                <div class="butterfly">🦋</div>
+                <div class="butterfly">🦋</div>
+            </div>
+            <div class="keep-smiling">Keep Smiling 💝</div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Created with 💝 for a friend. Always remember: You matter.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/pages.js"></script>
+</body>
+</html>
